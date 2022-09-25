@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Pacifico&family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  outline: none;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    to right,
+    #371b58 0%,
+    #371b58 30%,
+    #7858a6 30%,
+    #7858a6 100%
+  );
+
+  font-family: "Poppins", sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.container {
+  width: 90%;
+  max-width: 1440px;
+  margin: auto;
+}
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+}
+.nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav li {
+  padding-left: 1em;
+  font-size: 1.2em;
+  font-weight: 500;
+
+  padding-top: 1.2em;
+}
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  padding-top: 10px;
+}
+.nav .logo {
+  font-family: "Pacifico", cursive;
+  font-size: 3em;
+  color: #bf40bf;
+  padding-top: 5px;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10em;
+  padding-top: 100px;
+}
+.hero img {
+  width: 25%;
+}
+.hero .txt {
+  width: 60%;
+  margin: auto 400px;
+  margin-top: -200px;
+}
+.hero p {
+  font-size: 3em;
+
+  color: white;
+  font-weight: 100;
+}
+.hero h2 {
+  font-size: 1.7em;
+  color: #371b58;
+  font-family: "Mochiy Pop P One", sans-serif;
+  padding-bottom: 20px;
+}
+.portfolio {
+  background-image: linear-gradient(to bottom right, #9a0680, #bf40bf);
+  padding-bottom: 100px;
+}
+.portfolio h2 {
+  color: #fff;
+  font-size: 2.5em;
+  padding-top: 1em;
+}
+.slider {
+  position: relative;
+}
+.slider .slide-container .slide {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px 9%;
+  padding-bottom: 70px;
+}
+.slider .slide-container .slide .content {
+  flex: 1 1 350px;
+  animation: slideContent 0.4s linear 0.6s backwards;
+}
+@keyframes slideContent {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+.slider .slide-container .slide .image {
+  flex: 1 1 500px;
+}
+.slider .slide-container .slide .image img {
+  width: 100%;
+  animation: slideimage 0.4s linear;
+}
+@keyframes slideimage {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+.slider .slide-container .slide .content h3 {
+  font-size: 2em;
+  color: #fff;
+}
+.slider .slide-container .slide .content p {
+  font-size: 1.5em;
+  color: #fff;
+  font-weight: 100;
+}
+.slider .slide-container .slide .content .btn {
+  cursor: pointer;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #7858a6;
+  font-size: 18px;
+  padding: 9px 40px;
+  border-radius: 2em;
+}
+.slider .slide-container .slide .content .btn:hover {
+  background: #371b58;
+}
+.slider .slide-container {
+  display: none;
+}
+.slider .slide-container.active {
+  display: block;
+}
+.slider .prev:hover,
+.slider .next:hover {
+  background-color: #371b58;
+}
+
+.slider .prev,
+.slider .next {
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  transform: translateY(-50%);
+  height: 50px;
+  width: 40px;
+  line-height: 50px;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+  background: #7858a6;
+  font-weight: bolder;
+}
+
+.slider .prev {
+  left: 20px;
+}
+.slider .next {
+  right: 20px;
+}
+.skills {
+  padding-bottom: 100px;
+  background-image: linear-gradient(to right, #682666, #610c63, #7a4495);
+  color: #fff;
+}
+
+.skills h2 {
+  padding-top: 1em;
+  font-size: 2.5em;
+}
+.skills .skill-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5%;
+  padding-top: 50px;
+}
+.skills .skill-box .card {
+  padding-left: 5em;
+  padding-top: 5em;
+}
+
+.skills .skill-box img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 61% 39% 60% 40% / 27% 65% 35% 73%;
+  animation: change ease-in-out 5s infinite;
+}
+@keyframes change {
+  0% {
+    border-radius: 61% 39% 60% 40% / 27% 65% 35% 73%;
+  }
+  25% {
+    border-radius: 30% 70% 45% 55% / 78% 30% 70% 22%;
+  }
+  50% {
+    border-radius: 11% 89% 22% 78% / 44% 33% 67% 56%;
+  }
+  75% {
+    border-radius: 38% 62% 70% 30% / 78% 74% 26% 22%;
+  }
+  100% {
+    border-radius: 61% 39% 60% 40% / 27% 65% 35% 73%;
+  }
+}
+.about-me {
+  background-color: #371b58;
+  padding-bottom: 600px;
+}
+.about-me h2 {
+  color: #fff;
+  font-size: 2.5em;
+  padding: 1em 0;
+}
+.about-me img {
+  width: 18%;
+  margin-left: 800px;
+  padding-bottom: 1em;
+}
+.about-me p {
+  width: 60%;
+  color: #fff;
+  margin: auto;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+.about-me p span:nth-of-type(1) {
+  color: #bf40bf;
+  font-weight: normal;
+}
+.about-me p span:nth-of-type(2) {
+  color: #bf40bf;
+  font-weight: normal;
+}
+@media (max-width: 700px) {
+  body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+      to right,
+      #371b58 0%,
+      #371b58 30%,
+      #371b58 30%,
+      #371b58 100%
+    );
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: transparent;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    margin-left: 10px;
+  }
+  .main-nav {
+    display: none;
+  }
+  .toggle-button {
+    display: block;
+  }
+  .nav .main-nav li:hover {
+    color: #9a0680;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+  .nav .logo {
+    font-family: "Pacifico", cursive;
+    font-size: 1.8em;
+    color: #bf40bf;
+  }
+  .hero h2 {
+    font-size: 1.7em;
+    color: #7858a6;
+    font-family: "Mochiy Pop P One", sans-serif;
+    padding-bottom: 40px;
+  }
+  .hero img {
+    display: none;
+  }
+  .hero .txt {
+    width: 90%;
+    margin: auto;
+  }
+  .slider .slide-container .slide .content h3 {
+    font-size: 1.3em;
+  }
+  .slider .slide-container .slide .content p {
+    font-size: 1em;
+  }
+  .slider .slide-container .slide .content .btn {
+    font-size: 0.8em;
+    padding: 6px 20px;
+  }
+  .slider .prev {
+    left: 0px;
+    top: 60%;
+  }
+  .slider .next {
+    right: 0px;
+    top: 60%;
+  }
+  .skills .skill-box {
+    margin: 0;
+  }
+  .skills .skill-box img {
+    width: 80px;
+    height: 80px;
+  }
+  .skills .skill-box .card {
+    padding-left: 1.8em;
+    padding-top: 3em;
+  }
+  .about-me img {
+    width: 40%;
+    margin-left: 80px;
+    padding: 2em 0;
+  }
+  .about-me p {
+    width: 90%;
+    color: #fff;
+    margin: auto;
+    font-size: 1.3em;
+    font-weight: 100;
+  }
+}
+@media (min-width: 700px) and (max-width: 1000px) {
+  .nav .logo {
+    font-size: 2.2em;
+  }
+  .skills .skill-box img {
+    width: 180px;
+    height: 180px;
+  }
+  .slider .slide-container .slide .content h3 {
+    font-size: 1.8em;
+  }
+  .slider .slide-container .slide .content p {
+    font-size: 1.5em;
+  }
+  .about-me img {
+    width: 18%;
+    margin-left: 600px;
+    padding-bottom: 1em;
+  }
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/script.js" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <h2 class="logo">Jokodola <span>.</span></h2>
+        <a href="#" class="toggle-button">
+          <img src="/img/icon-hamburger.svg" alt="icon-hamburger" />
+        </a>
+        <div class="main-nav">
+          <ul>
+            <li><a href="">portfolio</a></li>
+            <li><a href="">skills</a></li>
+            <li><a href="">about me</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="hero">
+      <div class="container">
+        <img src="/img/undraw_learning_sketching_nd4f.svg" alt="" />
+        <div class="txt">
+          <h2>Hi, i'm Jokodola Esther</h2>
+          <p>
+            i enjoy creating fun, cool stuffs with code. i explore the magic of
+            the web.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio">
+      <div class="container">
+        <h2>Portfolio</h2>
+
+        <div class="slider">
+          <div class="slide-container active">
+            <div class="slide">
+              <div class="content">
+                <h3>SunnySide Website</h3>
+                <p>
+                  A simple landing page from frontend mentor to test my skills
+                  on layout and responsiveness.
+                </p>
+                <a href="https://estherjokodola1.netlify.app" class="btn"
+                  >View the site</a
+                >
+              </div>
+              <div class="image">
+                <img src="/img/undraw_enter_uhqk.svg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-container">
+            <div class="slide">
+              <div class="content">
+                <h3>Blogr Website</h3>
+                <p>
+                  A simple landing page from frontend mentor to test my skills
+                  on layout and responsiveness.
+                </p>
+                <a href="http://estherjokodola2@netlify.app" class="btn"
+                  >View the site</a
+                >
+              </div>
+              <div class="image">
+                <img src="/img/undraw_enter_uhqk.svg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-container">
+            <div class="slide">
+              <div class="content">
+                <h3>Crappo Website</h3>
+                <p>
+                  A simple landing page from an open source to test my skills on
+                  layout and responsiveness.
+                </p>
+                <a href="http://estherjokodola3@netlify.app" class="btn"
+                  >View the site</a
+                >
+              </div>
+              <div class="image">
+                <img src="/img/undraw_enter_uhqk.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="prev" onclick="prev()"><</div>
+          <div class="next" onclick="next()">></div>
+        </div>
+      </div>
+    </section>
+    <section class="skills">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skill-box">
+          <div class="html card">
+            <img src="/img/html.png" alt="" />
+          </div>
+          <div class="css card">
+            <img src="/img/css.png" alt="" />
+          </div>
+          <div class="js card">
+            <img src="/img/js.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about-me">
+      <div class="container">
+        <h2>About me</h2>
+        <img src="/img/undraw_female_avatar_w3jk.svg" alt="" />
+        <div class="text">
+          <p>
+            i am <span>Jokodola Esther</span>, a
+            <span>front-end developer</span> from nigeria.
+          </p>
+          <p>
+            I'm a natural enthusiastic person when it come to coding anything
+            about the web. it's been a therapeutic journey since i started
+            coding this year. I am really exicted to explore and learn more.
+          </p>
+          <p>
+            Really looking forward to creating the next big thing with you
+            <span>;)</span>
+          </p>
+        </div>
+      </div>
+    </section>
+    <script>
+      let slides = document.querySelectorAll(".slide-container");
+      let index = 0;
+
+      function next() {
+        slides[index].classList.remove("active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+      }
+
+      function prev() {
+        slides[index].classList.remove("active");
+        index = (index - 1 + slides.length) % slides.length;
+        slides[index].classList.add("active");
+      }
+      const toggleButton = document.getElementsByClassName("toggle-button")[0];
+      const navbar = document.getElementsByClassName("main-nav")[0];
+
+      toggleButton.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+      });
+      setInterval(next, 15000);
+    </script>
+  </body>
+</html>
