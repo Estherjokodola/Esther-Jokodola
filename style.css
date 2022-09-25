@@ -48,6 +48,7 @@ a {
 
   padding-top: 1.2em;
 }
+
 .toggle-button {
   position: absolute;
   top: 0.75rem;
@@ -73,11 +74,13 @@ a {
 }
 .hero img {
   width: 25%;
+  animation: slideimage 0.4s linear;
 }
 .hero .txt {
   width: 60%;
   margin: auto 400px;
   margin-top: -200px;
+  animation: slideContent 0.4s linear 0.6s backwards;
 }
 .hero p {
   font-size: 3em;
@@ -264,6 +267,10 @@ a {
   color: #bf40bf;
   font-weight: normal;
 }
+.about-me .icon ul {
+  display: flex;
+}
+
 @media (max-width: 700px) {
   body {
     width: 100%;
@@ -289,15 +296,14 @@ a {
     padding-top: 100px;
     padding-bottom: 50px;
     margin-left: 10px;
+    animation: slideContent 0.2s linear 0.3s backwards;
   }
+
   .main-nav {
     display: none;
   }
   .toggle-button {
     display: block;
-  }
-  .nav .main-nav li:hover {
-    color: #9a0680;
   }
 
   .main-nav.active {
