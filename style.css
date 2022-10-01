@@ -267,11 +267,33 @@ a {
   color: #bf40bf;
   font-weight: normal;
 }
-.about-me .icon ul {
+.footer .icon {
+  color: #9a0680;
   display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.footer .icon a {
+  color: #9a0680;
+}
+.fa-twitter,
+.fa-instagram {
+  color: #9a0680;
+  width: 50%;
 }
 
-@media (max-width: 700px) {
+.footer {
+  color: #9a0680;
+  background-color: #371b58;
+}
+.footer h3 {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 1000px) {
   body {
     width: 100%;
     min-height: 100vh;
@@ -289,14 +311,14 @@ a {
   }
   .nav ul {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-end;
+    text-align: end;
     width: 100%;
     background-color: transparent;
     padding-top: 100px;
     padding-bottom: 50px;
     margin-left: 10px;
-    animation: slideContent 0.2s linear 0.3s backwards;
+    animation: slideContent 0.4s linear;
   }
 
   .main-nav {
@@ -370,6 +392,17 @@ a {
   }
 }
 @media (min-width: 700px) and (max-width: 1000px) {
+  body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+      to right,
+      #371b58 0%,
+      #371b58 30%,
+      #371b58 30%,
+      #371b58 100%
+    );
+  }
   .nav .logo {
     font-size: 2.2em;
   }
